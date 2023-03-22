@@ -21,7 +21,7 @@ pub enum BoardPosition {
 }
 
 // Board generation options
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Resource)]
 pub struct BoardOptions {
     pub map_size: (u16, u16),
     pub bomb_count: u16,
@@ -60,4 +60,3 @@ impl Default for BoardOptions {
         }
     }
 }
-impl Resource for BoardOptions {}
